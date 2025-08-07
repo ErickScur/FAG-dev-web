@@ -32,6 +32,23 @@
       button:hover {
         background-color: #0056b3;
       }
+
+      .genero-group {
+        display: flex;
+        gap: 15px;
+        align-items: center;
+      }
+
+      .genero-option {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+      }
+
+      .genero-option input[type="radio"] {
+        margin: 0;
+        width: auto;
+      }
     </style>
   </head>
   <body>
@@ -49,11 +66,21 @@
         <input type="password" id="senha" name="senha" minlength="8" required />
 
         <b>Gênero</b>
-        <input type="radio" id="masculino" name="genero" value="masculino" />
-        <label for="masculino">Masculino</label>
-
-        <input type="radio" id="feminino" name="genero" value="feminino" />
-        <label for="feminino">Feminino</label>
+        <div class="genero-group">
+          <div class="genero-option">
+            <input
+              type="radio"
+              id="masculino"
+              name="genero"
+              value="masculino"
+            />
+            <label for="masculino">Masculino</label>
+          </div>
+          <div class="genero-option">
+            <input type="radio" id="feminino" name="genero" value="feminino" />
+            <label for="feminino">Feminino</label>
+          </div>
+        </div>
 
         <label for="biografia">Biografia:</label>
         <textarea
